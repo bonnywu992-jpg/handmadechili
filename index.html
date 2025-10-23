@@ -3,50 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>手工辣椒 - 純手工製作</title>
+<title>手工辣椒訂購</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Microsoft JhengHei', Arial, sans-serif; background: linear-gradient(135deg, #c62828 0%, #e53935 100%); min-height: 100vh; padding: 20px; }
+body { font-family: 'Microsoft JhengHei', Arial, sans-serif; background: linear-gradient(135deg, #e64a19 0%, #ff6f00 100%); min-height: 100vh; padding: 20px; }
 .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
-.header { background: linear-gradient(135deg, #b71c1c 0%, #c62828 100%); color: white; padding: 40px 30px; text-align: center; }
+.header { background: linear-gradient(135deg, #d84315 0%, #e64a19 100%); color: white; padding: 40px 30px; text-align: center; }
 .header h1 { font-size: 2.5em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
 .header p { font-size: 1.1em; opacity: 0.95; }
-.ig-link { display: inline-block; margin-top: 10px; padding: 8px 20px; background: rgba(255,255,255,0.2); border-radius: 20px; color: white; text-decoration: none; transition: background 0.3s; }
-.ig-link:hover { background: rgba(255,255,255,0.3); }
+.line-link { display: inline-block; margin-top: 10px; padding: 8px 20px; background: rgba(255,255,255,0.2); border-radius: 20px; color: white; text-decoration: none; transition: background 0.3s; }
+.line-link:hover { background: rgba(255,255,255,0.3); }
 .product-section { padding: 40px 30px; }
-.product-card { background: linear-gradient(135deg, #fff8f8 0%, #ffebee 100%); border-radius: 15px; padding: 30px; border: 3px solid #e53935; }
+.product-card { background: linear-gradient(135deg, #fff8f5 0%, #ffede7 100%); border-radius: 15px; padding: 30px; border: 3px solid #ff6f00; }
 .product-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 20px; }
-.product-name { font-size: 1.8em; color: #b71c1c; font-weight: bold; }
-.product-price { font-size: 1.6em; color: #c62828; font-weight: bold; }
-.special-badge { display: inline-block; background: #ff5252; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9em; margin-left: 10px; }
-.highlight { background: #fff3e0; padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #ff6f00; line-height: 1.8; }
-.highlight strong { color: #e65100; }
-.info-box { background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #43a047; line-height: 1.8; }
-.info-box strong { color: #2e7d32; display: block; margin-bottom: 8px; font-size: 1.1em; }
-.warning-box { background: #fff9c4; padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #fbc02d; line-height: 1.8; }
-.warning-box strong { color: #f57f17; display: block; margin-bottom: 8px; font-size: 1.1em; }
+.product-name { font-size: 1.8em; color: #d84315; font-weight: bold; }
+.product-price { font-size: 1.6em; color: #e64a19; font-weight: bold; }
+.special-badge { display: inline-block; background: #ff8a50; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9em; margin-left: 10px; }
+.highlight { background: #fff3e0; padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #ff6f00; }
+.highlight strong { color: #d84315; }
+.product-intro { background: linear-gradient(135deg, #fff8f0 0%, #ffe8e0 100%); border-radius: 15px; padding: 25px; margin: 20px 0; border: 2px solid #ff8a50; line-height: 1.8; }
+.product-intro h3 { color: #d84315; margin-bottom: 15px; font-size: 1.3em; }
+.product-intro p { color: #333; margin-bottom: 12px; font-size: 1.05em; }
+.product-intro strong { color: #e64a19; }
+.important-notice { background: #fff9e6; border: 2px solid #ffa726; border-radius: 10px; padding: 20px; margin: 20px 0; }
+.important-notice h4 { color: #e65100; margin-bottom: 15px; font-size: 1.2em; text-align: center; }
+.important-notice p { color: #d84315; font-weight: bold; margin: 10px 0; font-size: 1.05em; line-height: 1.8; }
+.specs-box { background: #fff3e0; border-radius: 8px; padding: 15px; margin-top: 15px; border-left: 4px solid #ff8a50; }
+.specs-box div { color: #333; margin-bottom: 8px; font-size: 1.05em; }
+.specs-box div:last-child { margin-bottom: 0; }
 .form-group { margin: 20px 0; }
 .form-group label { display: block; margin-bottom: 8px; color: #333; font-weight: bold; }
 .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em; transition: border-color 0.3s; }
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #e53935; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #ff6f00; }
 .quantity-control { display: flex; align-items: center; gap: 15px; }
-.quantity-control button { width: 40px; height: 40px; border: none; background: #e53935; color: white; font-size: 1.5em; border-radius: 8px; cursor: pointer; transition: background 0.3s; user-select: none; }
-.quantity-control button:hover { background: #c62828; }
+.quantity-control button { width: 40px; height: 40px; border: none; background: #ff6f00; color: white; font-size: 1.5em; border-radius: 8px; cursor: pointer; transition: background 0.3s; user-select: none; }
+.quantity-control button:hover { background: #e64a19; }
 .quantity-control button:active { transform: scale(0.95); }
-.quantity-control input { width: 80px; text-align: center; font-size: 1.2em; font-weight: bold; pointer-events: none; }
+.quantity-control input { width: 80px; text-align: center; font-size: 1.2em; font-weight: bold; }
 .total-section { background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0; }
 .total-row { display: flex; justify-content: space-between; margin: 10px 0; font-size: 1.1em; }
-.total-row.final { font-size: 1.5em; font-weight: bold; color: #b71c1c; border-top: 2px solid #ddd; padding-top: 10px; margin-top: 15px; }
-.notice { background: #fff3e0; padding: 15px; border-radius: 10px; margin: 20px 0; text-align: center; font-weight: bold; color: #e65100; border: 2px dashed #ff9800; }
-.submit-btn { width: 100%; padding: 18px; background: linear-gradient(135deg, #b71c1c 0%, #c62828 100%); color: white; border: none; border-radius: 12px; font-size: 1.3em; font-weight: bold; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; margin-bottom: 10px; }
-.submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(183, 28, 28, 0.4); }
+.total-row.final { font-size: 1.5em; font-weight: bold; color: #d84315; border-top: 2px solid #ddd; padding-top: 10px; margin-top: 15px; }
+.notice { background: #fff3e0; padding: 15px; border-radius: 10px; margin: 20px 0; text-align: center; font-weight: bold; color: #d84315; border: 2px dashed #ffa726; }
+.submit-btn { width: 100%; padding: 18px; background: linear-gradient(135deg, #d84315 0%, #e64a19 100%); color: white; border: none; border-radius: 12px; font-size: 1.3em; font-weight: bold; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; margin-bottom: 10px; }
+.submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(216, 67, 21, 0.4); }
 .submit-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; }
-.success-message { background: #d3f9d8; padding: 20px; border-radius: 10px; margin: 20px 0; text-align: center; color: #2b8a3e; font-weight: bold; border: 2px solid #51cf66; line-height: 1.8; }
-.error-message { background: #ffe3e3; padding: 20px; border-radius: 10px; margin: 20px 0; text-align: center; color: #b71c1c; font-weight: bold; border: 2px solid #e53935; }
+.success-message { background: #d3f9d8; padding: 20px; border-radius: 10px; margin: 20px 0; text-align: center; color: #2b8a3e; font-weight: bold; border: 2px solid #51cf66; }
+.error-message { background: #ffe3e3; padding: 20px; border-radius: 10px; margin: 20px 0; text-align: center; color: #d84315; font-weight: bold; border: 2px solid #ff6f00; }
 .store-section { background: #f8f9fa; padding: 15px; border-radius: 10px; margin-top: 10px; border: 2px solid #e9ecef; }
-.store-region { margin-bottom: 15px; }
-.store-region:last-child { margin-bottom: 0; }
-.store-region label { font-size: 0.95em; color: #495057; margin-bottom: 5px; display: block; }
 #addressGroup { display: none; }
 </style>
 </head>
@@ -54,26 +57,56 @@ body { font-family: 'Microsoft JhengHei', Arial, sans-serif; background: linear-
 <div class="container">
   <div class="header">
     <h1>🌶️ 手工辣椒 🌶️</h1>
-    <p>純手工製作 · 不加防腐劑</p>
-    <a href="https://line.me/ti/p/@628puagn" target="_blank" class="ig-link">📱 官方帳號：@628puagn</a>
+    <p>純手工製作 • 香濃辣味讓人回味</p>
+    <a href="https://line.me/R/ti/p/@628puagn" target="_blank" class="line-link">📱 官方 LINE：@628puagn</a>
   </div>
 
   <div class="product-section">
     <div class="product-card">
+      
       <div class="product-header">
         <div>
           <span class="product-name">手工辣椒</span>
           <span class="special-badge">🔥 香濃辣味</span>
         </div>
-        <div class="product-price">NT$ 230 / 罐</div>
+        <div class="product-price">NT$ 230 / 罐 (300g)</div>
       </div>
 
       <div class="highlight">
-        <strong>• 純手工製作、不加防腐劑，香濃辣味讓人回味</strong><br><br>
-        <strong>⚠️ 重要提醒</strong><br>
-        🕐 因是純手工製作，製作天數約 7-10 天<br>
-        ❄️ 因是純手工製作，皆以冷藏出貨<br>
-        🧊 因是純手工製作，請於收到辣椒之後以冷藏保存
+        <strong>純手工製作、不加防腐劑，香濃辣味讓人回味 ⚠️</strong>
+      </div>
+
+      <div class="important-notice">
+        <h4>⚠️ 重要提醒</h4>
+        <div style="background: white; border-radius: 8px; padding: 15px; margin: 15px 0;">
+          <p style="color: #e65100; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.5em;">⏰</span>
+            <span>純手工製作，製作天數約 <strong style="font-size: 1.1em;">7-10 天</strong></span>
+          </p>
+        </div>
+        <div style="background: white; border-radius: 8px; padding: 15px; margin: 15px 0;">
+          <p style="color: #1976d2; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.5em;">❄️</span>
+            <span>全程 <strong style="font-size: 1.1em;">冷藏出貨</strong>，確保新鮮品質</span>
+          </p>
+        </div>
+        <div style="background: white; border-radius: 8px; padding: 15px; margin: 15px 0;">
+          <p style="color: #c62828; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.5em;">🧊</span>
+            <span>收到商品後請務必 <strong style="font-size: 1.1em;">冷藏保存</strong></span>
+          </p>
+        </div>
+        <div style="background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%); border-radius: 8px; padding: 15px; margin-top: 20px; border: 2px solid #ffa726;">
+          <p style="color: #e65100; text-align: center; margin: 5px 0;">📌 匯款後請私訊官方帳號告知訂購商品及核對後五碼</p>
+          <p style="color: #d84315; text-align: center; font-size: 1.1em; margin: 10px 0;"><strong>官方 LINE：@628puagn</strong></p>
+          <p style="color: #e65100; text-align: center; margin: 5px 0;">📌 商品將於確認收到匯款後開始製作</p>
+        </div>
+      </div>
+
+      <div class="specs-box">
+        <div><strong>付款方式：</strong>ATM 轉帳、銀行匯款</div>
+        <div><strong>出貨方式：</strong>郵局包裹 / 超商店到店（7-11 或 全家）</div>
+        <div><strong>運費：</strong>NT$ 130（購買 10 罐含以上免運）</div>
       </div>
 
       <form id="orderForm">
@@ -98,19 +131,22 @@ body { font-family: 'Microsoft JhengHei', Arial, sans-serif; background: linear-
             <option value="">請選擇取貨方式</option>
             <option value="7-11">7-11 超商取貨</option>
             <option value="全家">全家超商取貨</option>
-            <option value="宅配">宅配</option>
+            <option value="郵局包裹">郵局包裹</option>
           </select>
         </div>
 
-        <div class="info-box" id="paymentNotice" style="display:none;">
-          <strong>💳 匯款提醒</strong>
-          匯款後請私訊官方帳號告知訂購商品及核對後五碼<br>
-          官方帳號：<strong>@628puagn</strong>
-        </div>
-
         <div class="form-group" id="storeSelectGroup" style="display:none;">
-          <label>選擇門市 *</label>
-          <div class="store-section" id="storeSection"></div>
+          <label>門市資訊 *</label>
+          <div class="store-section">
+            <div style="margin-bottom:15px;">
+              <label style="display:block;margin-bottom:8px;color:#495057;font-size:0.95em;">請填寫取貨門市資訊</label>
+              <input type="text" id="storeCity" placeholder="縣市 + 區域（例：高雄市苓雅區）" style="width:100%;padding:12px;border:2px solid #ddd;border-radius:8px;font-size:1em;margin-bottom:10px;">
+              <input type="text" id="storeName" placeholder="門市名稱（例：武廟門市）" style="width:100%;padding:12px;border:2px solid #ddd;border-radius:8px;font-size:1em;">
+              <div style="margin-top:10px;padding:12px;background:#fff8f0;border-radius:6px;font-size:0.9em;color:#666;">
+                💡 提示：請填寫您方便取貨的門市完整資訊
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="form-group" id="addressGroup">
@@ -141,122 +177,201 @@ body { font-family: 'Microsoft JhengHei', Arial, sans-serif; background: linear-
 </div>
 
 <script>
-const WEB3FORMS_ACCESS_KEY='63c8b2d8-bddb-46cb-b683-e3c0becf31bf';
-const MERCHANT_EMAIL='bonnywu992@gmail.com';
-const PRICE=230, SHIPPING_DELIVERY=160, SHIPPING_STORE=130, FREE_SHIPPING_QTY=10;
+(function() {
+'use strict';
 
-// 完整的門市資料
-const storeData = {
-  '7-11': {
-    '台北市': {'中正區':['中正門市'],'大同區':['大同門市'],'中山區':['中山門市'],'松山區':['松山門市'],'大安區':['大安門市'],'萬華區':['萬華門市'],'信義區':['信義門市'],'士林區':['士林門市'],'北投區':['北投門市'],'內湖區':['內湖門市'],'南港區':['南港門市'],'文山區':['文山門市']},
-    '新北市': {'板橋區':['板橋門市'],'三重區':['三重門市'],'中和區':['中和門市'],'永和區':['永和門市'],'新莊區':['新莊門市'],'新店區':['新店門市'],'樹林區':['樹林門市'],'鶯歌區':['鶯歌門市'],'三峽區':['三峽門市'],'淡水區':['淡水門市'],'汐止區':['汐止門市'],'瑞芳區':['瑞芳門市'],'土城區':['土城門市'],'蘆洲區':['蘆洲門市'],'五股區':['五股門市'],'泰山區':['泰山門市'],'林口區':['林口門市']},
-    '桃園市': {'桃園區':['桃園門市'],'中壢區':['中壢門市'],'平鎮區':['平鎮門市'],'八德區':['八德門市'],'楊梅區':['楊梅門市'],'蘆竹區':['蘆竹門市'],'大溪區':['大溪門市'],'龍潭區':['龍潭門市'],'龜山區':['龜山門市']},
-    '台中市': {'中區':['中區門市'],'東區':['東區門市'],'南區':['南區門市'],'西區':['西區門市'],'北區':['北區門市'],'西屯區':['西屯門市'],'南屯區':['南屯門市'],'北屯區':['北屯門市'],'豐原區':['豐原門市'],'大里區':['大里門市'],'太平區':['太平門市']},
-    '台南市': {'中西區':['中西門市'],'東區':['東區門市'],'南區':['南區門市'],'北區':['北區門市'],'安平區':['安平門市'],'安南區':['安南門市'],'永康區':['永康門市'],'歸仁區':['歸仁門市'],'新化區':['新化門市']},
-    '高雄市': {'新興區':['新興門市'],'前金區':['前金門市'],'苓雅區':['苓雅門市'],'鹽埕區':['鹽埕門市'],'鼓山區':['鼓山門市'],'旗津區':['旗津門市'],'前鎮區':['前鎮門市'],'三民區':['三民門市'],'左營區':['左營門市'],'楠梓區':['楠梓門市'],'小港區':['小港門市'],'鳳山區':['鳳山門市']}
-  },
-  '全家': {
-    '台北市': {'中正區':['中正店'],'大同區':['大同店'],'中山區':['中山店'],'松山區':['松山店'],'大安區':['大安店'],'萬華區':['萬華店'],'信義區':['信義店'],'士林區':['士林店'],'北投區':['北投店'],'內湖區':['內湖店'],'南港區':['南港店'],'文山區':['文山店']},
-    '新北市': {'板橋區':['板橋店'],'三重區':['三重店'],'中和區':['中和店'],'永和區':['永和店'],'新莊區':['新莊店'],'新店區':['新店店'],'樹林區':['樹林店'],'鶯歌區':['鶯歌店'],'三峽區':['三峽店'],'淡水區':['淡水店'],'汐止區':['汐止店'],'瑞芳區':['瑞芳店'],'土城區':['土城店'],'蘆洲區':['蘆洲店'],'五股區':['五股店'],'泰山區':['泰山店'],'林口區':['林口店']},
-    '桃園市': {'桃園區':['桃園店'],'中壢區':['中壢店'],'平鎮區':['平鎮店'],'八德區':['八德店'],'楊梅區':['楊梅店'],'蘆竹區':['蘆竹店'],'大溪區':['大溪店'],'龍潭區':['龍潭店'],'龜山區':['龜山店']},
-    '台中市': {'中區':['中區店'],'東區':['東區店'],'南區':['南區店'],'西區':['西區店'],'北區':['北區店'],'西屯區':['西屯店'],'南屯區':['南屯店'],'北屯區':['北屯店'],'豐原區':['豐原店'],'大里區':['大里店'],'太平區':['太平店']},
-    '台南市': {'中西區':['中西店'],'東區':['東區店'],'南區':['南區店'],'北區':['北區店'],'安平區':['安平店'],'安南區':['安南店'],'永康區':['永康店'],'歸仁區':['歸仁店'],'新化區':['新化店']},
-    '高雄市': {'新興區':['新興店'],'前金區':['前金店'],'苓雅區':['苓雅店'],'鹽埕區':['鹽埕店'],'鼓山區':['鼓山店'],'旗津區':['旗津店'],'前鎮區':['前鎮店'],'三民區':['三民店'],'左營區':['左營店'],'楠梓區':['楠梓店'],'小港區':['小港店'],'鳳山區':['鳳山店']}
-  }
+const CFG = {
+  KEY: '63c8b2d8-bddb-46cb-b683-e3c0becf31bf',
+  EMAIL: 'bonnywu992@gmail.com',
+  PRICE: 230,
+  SHIP: 130,
+  FREE: 10
 };
 
-const qtyInput=document.getElementById('qty'),btnPlus=document.getElementById('btnPlus'),btnMinus=document.getElementById('btnMinus'),subtotalDisplay=document.getElementById('subtotalDisplay'),shippingDisplay=document.getElementById('shippingDisplay'),totalDisplay=document.getElementById('totalDisplay'),freeShipNotice=document.getElementById('freeShipNotice'),pickupSelect=document.getElementById('pickup'),storeSelectGroup=document.getElementById('storeSelectGroup'),addressGroup=document.getElementById('addressGroup'),storeSection=document.getElementById('storeSection');
-let selectedStore='',citySelect,districtSelect,storeSelect;
+function generateOrderId() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  const random = Math.floor(Math.random() * 10000).toString().padStart(4, '0');
+  return 'YW' + year + month + day + random;
+}
 
-function generateOrderId(){const now=new Date();return'HC'+now.getFullYear()+String(now.getMonth()+1).padStart(2,'0')+String(now.getDate()).padStart(2,'0')+Math.floor(Math.random()*10000).toString().padStart(4,'0');}
+const elements = {
+  qty: document.getElementById('qty'),
+  btnPlus: document.getElementById('btnPlus'),
+  btnMinus: document.getElementById('btnMinus'),
+  subtotal: document.getElementById('subtotalDisplay'),
+  shipping: document.getElementById('shippingDisplay'),
+  total: document.getElementById('totalDisplay'),
+  notice: document.getElementById('freeShipNotice'),
+  pickup: document.getElementById('pickup'),
+  storeGroup: document.getElementById('storeSelectGroup'),
+  addressGroup: document.getElementById('addressGroup'),
+  form: document.getElementById('orderForm'),
+  submitBtn: document.getElementById('submitBtn'),
+  message: document.getElementById('message')
+};
 
-function updatePrice(){let qty=parseInt(qtyInput.value);if(isNaN(qty)||qty<1){qty=1;qtyInput.value=1;}const subtotal=PRICE*qty,pickupMethod=pickupSelect.value;let shipping=0;if(pickupMethod==='宅配')shipping=(qty>=FREE_SHIPPING_QTY)?0:SHIPPING_DELIVERY;else if(pickupMethod==='7-11'||pickupMethod==='全家')shipping=(qty>=FREE_SHIPPING_QTY)?0:SHIPPING_STORE;else shipping=(qty>=FREE_SHIPPING_QTY)?0:SHIPPING_STORE;const total=subtotal+shipping;subtotalDisplay.textContent='NT$ '+subtotal;shippingDisplay.textContent=(shipping===0)?'免運費 ✓':'NT$ '+shipping;totalDisplay.textContent='NT$ '+total;if(qty<FREE_SHIPPING_QTY){const left=FREE_SHIPPING_QTY-qty;freeShipNotice.textContent='再買 '+left+' 罐即可免運 🎁';freeShipNotice.style.background='#fff3e0';}else{const savedAmount=(pickupMethod==='宅配')?SHIPPING_DELIVERY:SHIPPING_STORE;freeShipNotice.textContent='🎉 已達免運門檻!恭喜省下 NT$ '+savedAmount+' 運費!';freeShipNotice.style.background='#d3f9d8';}}
+function updatePrice() {
+  const quantity = parseInt(elements.qty.value) || 1;
+  const subtotal = CFG.PRICE * quantity;
+  const shipping = quantity >= CFG.FREE ? 0 : CFG.SHIP;
+  const total = subtotal + shipping;
+  
+  elements.subtotal.textContent = 'NT$ ' + subtotal;
+  elements.shipping.textContent = shipping === 0 ? '免運費 ✓' : 'NT$ ' + shipping;
+  elements.total.textContent = 'NT$ ' + total;
+  
+  if (quantity < CFG.FREE) {
+    elements.notice.textContent = '再買 ' + (CFG.FREE - quantity) + ' 罐即可免運 🎁';
+    elements.notice.style.background = '#fff3e0';
+  } else {
+    elements.notice.textContent = '🎉 已達免運門檻!恭喜省下 NT$ ' + CFG.SHIP + ' 運費!';
+    elements.notice.style.background = '#d3f9d8';
+  }
+}
 
-function renderStoreOptions(pickupMethod){storeSection.innerHTML='';selectedStore='';if(!storeData[pickupMethod])return;const stores=storeData[pickupMethod];const cityDiv=document.createElement('div');cityDiv.className='store-region';const cityLabel=document.createElement('label');cityLabel.textContent='選擇城市';cityDiv.appendChild(cityLabel);citySelect=document.createElement('select');citySelect.style.width='100%';citySelect.style.padding='12px';citySelect.style.border='2px solid #ddd';citySelect.style.borderRadius='8px';citySelect.style.fontSize='1em';const cityDefault=document.createElement('option');cityDefault.value='';cityDefault.textContent='請選擇城市';citySelect.appendChild(cityDefault);Object.keys(stores).forEach(city=>{const option=document.createElement('option');option.value=city;option.textContent=city;citySelect.appendChild(option);});cityDiv.appendChild(citySelect);storeSection.appendChild(cityDiv);const districtDiv=document.createElement('div');districtDiv.className='store-region';const districtLabel=document.createElement('label');districtLabel.textContent='選擇區域';districtDiv.appendChild(districtLabel);districtSelect=document.createElement('select');districtSelect.style.width='100%';districtSelect.style.padding='12px';districtSelect.style.border='2px solid #ddd';districtSelect.style.borderRadius='8px';districtSelect.style.fontSize='1em';districtSelect.disabled=true;const districtDefault=document.createElement('option');districtDefault.value='';districtDefault.textContent='請先選擇城市';districtSelect.appendChild(districtDefault);districtDiv.appendChild(districtSelect);storeSection.appendChild(districtDiv);const storeDiv=document.createElement('div');storeDiv.className='store-region';const storeLabel=document.createElement('label');storeLabel.textContent='選擇門市';storeDiv.appendChild(storeLabel);storeSelect=document.createElement('select');storeSelect.style.width='100%';storeSelect.style.padding='12px';storeSelect.style.border='2px solid #ddd';storeSelect.style.borderRadius='8px';storeSelect.style.fontSize='1em';storeSelect.disabled=true;const storeDefault=document.createElement('option');storeDefault.value='';storeDefault.textContent='請先選擇區域';storeSelect.appendChild(storeDefault);storeDiv.appendChild(storeSelect);storeSection.appendChild(storeDiv);citySelect.addEventListener('change',function(){const selectedCity=this.value;districtSelect.innerHTML='';storeSelect.innerHTML='';storeSelect.disabled=true;selectedStore='';const dd=document.createElement('option');dd.value='';dd.textContent='請選擇區域';districtSelect.appendChild(dd);const sd=document.createElement('option');sd.value='';sd.textContent='請先選擇區域';storeSelect.appendChild(sd);if(selectedCity&&stores[selectedCity]){districtSelect.disabled=false;Object.keys(stores[selectedCity]).forEach(district=>{const option=document.createElement('option');option.value=district;option.textContent=district;districtSelect.appendChild(option);});}else{districtSelect.disabled=true;}});districtSelect.addEventListener('change',function(){const selectedCity=citySelect.value,selectedDistrict=this.value;storeSelect.innerHTML='';selectedStore='';const sd=document.createElement('option');sd.value='';sd.textContent='請選擇門市';storeSelect.appendChild(sd);if(selectedCity&&selectedDistrict&&stores[selectedCity][selectedDistrict]){storeSelect.disabled=false;stores[selectedCity][selectedDistrict].forEach(store=>{const option=document.createElement('option');option.value=selectedCity+'-'+selectedDistrict+'-'+store;option.textContent=store;storeSelect.appendChild(option);});}else{storeSelect.disabled=true;}});storeSelect.addEventListener('change',function(){selectedStore=this.value;});}
+elements.pickup.addEventListener('change', function() {
+  const method = this.value;
+  const address = document.getElementById('address');
+  const addressLabel = document.getElementById('addressLabel');
+  
+  if (method === '7-11' || method === '全家') {
+    elements.storeGroup.style.display = 'block';
+    elements.addressGroup.style.display = 'none';
+    address.value = '';
+  } else if (method === '郵局包裹') {
+    elements.storeGroup.style.display = 'none';
+    elements.addressGroup.style.display = 'block';
+    addressLabel.textContent = '收貨地址 *';
+    address.placeholder = '請填寫完整地址';
+    address.value = '';
+    address.readOnly = false;
+    address.style.backgroundColor = '';
+  } else {
+    elements.storeGroup.style.display = 'none';
+    elements.addressGroup.style.display = 'none';
+  }
+  updatePrice();
+});
 
-pickupSelect.addEventListener('change',function(){const method=this.value;const paymentNotice=document.getElementById('paymentNotice');if(method==='7-11'||method==='全家'){storeSelectGroup.style.display='block';addressGroup.style.display='none';paymentNotice.style.display='block';renderStoreOptions(method);}else if(method==='宅配'){storeSelectGroup.style.display='none';addressGroup.style.display='block';paymentNotice.style.display='block';document.getElementById('addressLabel').textContent='收貨地址 *';document.getElementById('address').placeholder='請填寫完整地址';}else{storeSelectGroup.style.display='none';addressGroup.style.display='none';paymentNotice.style.display='none';}updatePrice();});
+elements.btnPlus.addEventListener('click', function(e) {
+  e.preventDefault();
+  const currentQty = parseInt(elements.qty.value);
+  elements.qty.value = currentQty + 1;
+  updatePrice();
+});
 
-btnPlus.addEventListener('click',function(e){e.preventDefault();qtyInput.value=parseInt(qtyInput.value)+1;updatePrice();});
-btnMinus.addEventListener('click',function(e){e.preventDefault();if(parseInt(qtyInput.value)>1){qtyInput.value=parseInt(qtyInput.value)-1;updatePrice();}});
+elements.btnMinus.addEventListener('click', function(e) {
+  e.preventDefault();
+  const currentQty = parseInt(elements.qty.value);
+  if (currentQty > 1) {
+    elements.qty.value = currentQty - 1;
+    updatePrice();
+  }
+});
 
-document.getElementById('orderForm').addEventListener('submit',async function(e){e.preventDefault();const submitBtn=document.getElementById('submitBtn'),messageDiv=document.getElementById('message'),phone=document.getElementById('phone').value.trim(),account=document.getElementById('accountLast5').value.trim(),pickupMethod=document.getElementById('pickup').value,addressInput=document.getElementById('address').value.trim();if(!/^09\d{8}$/.test(phone)){messageDiv.innerHTML='<div class="error-message">❌ 請輸入正確手機號碼(例:0912345678)</div>';return;}if(!/^\d{5}$/.test(account)){messageDiv.innerHTML='<div class="error-message">❌ 帳號後5碼必須是5位數字</div>';return;}let finalAddress='';if(pickupMethod==='7-11'||pickupMethod==='全家'){if(!selectedStore){messageDiv.innerHTML='<div class="error-message">❌ 請選擇門市</div>';return;}finalAddress=selectedStore;}else if(pickupMethod==='宅配'){if(addressInput.length<5){messageDiv.innerHTML='<div class="error-message">❌ 請填寫完整地址</div>';return;}finalAddress=addressInput;}else{messageDiv.innerHTML='<div class="error-message">❌ 請選擇取貨方式</div>';return;}submitBtn.disabled=true;submitBtn.textContent='處理中...';messageDiv.innerHTML='';try{const qty=parseInt(qtyInput.value),subtotal=PRICE*qty;let shipping=0;if(pickupMethod==='宅配')shipping=(qty>=FREE_SHIPPING_QTY)?0:SHIPPING_DELIVERY;else if(pickupMethod==='7-11'||pickupMethod==='全家')shipping=(qty>=FREE_SHIPPING_QTY)?0:SHIPPING_STORE;const total=subtotal+shipping,orderId=generateOrderId(),orderTime=new Date().toLocaleString('zh-TW',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}),customerName=document.getElementById('name').value,customerEmail=document.getElementById('email').value,note=document.getElementById('note').value||'無';const merchantEmailContent=`╔═══════════════════════════════════╗
-🛒 新訂單通知 - 手工辣椒
-╚═══════════════════════════════════╝
-訂單編號: ${orderId}
-訂單時間: ${orderTime}
-姓名: ${customerName}
-電話: ${phone}
-Email: ${customerEmail}
-取貨方式: ${pickupMethod}
-收貨地址/門市: ${finalAddress}
-匯款帳號後5碼: ${account}
-商品: 手工辣椒 300g
-單價: NT$ ${PRICE}
-數量: ${qty} 罐
-小計: NT$ ${subtotal}
-運費: ${shipping===0?'免運費 ✓':'NT$ '+shipping}
-總額: NT$ ${total}
-備註: ${note}
-⚠️ 製作天數約 7-10 天
-⚠️ 冷藏出貨`;await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({access_key:WEB3FORMS_ACCESS_KEY,subject:`🛒 新訂單 ${orderId} - 手工辣椒`,from_name:'手工辣椒訂購系統',email:MERCHANT_EMAIL,message:merchantEmailContent})});const customerEmailContent=`親愛的 ${customerName} 您好:
-
-感謝您訂購手工辣椒！
-
-訂單編號: ${orderId}
-商品: 手工辣椒 (300g) x ${qty} 罐
-小計: NT$ ${subtotal}
-運費: ${shipping===0?'免運費 ✓':'NT$ '+shipping}
-總計: NT$ ${total}
-取貨方式: ${pickupMethod}
-地址/門市: ${finalAddress}
-
-⚠️ 重要提醒
-• 製作天數約 7-10 天
-• 冷藏出貨，收到後請冷藏保存
-📌 請私訊官方帳號核對後五碼
-官方帳號: @628puagn`;await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({access_key:WEB3FORMS_ACCESS_KEY,from_name:'手工辣椒訂購系統',email:customerEmail,message:customerEmailContent})});messageDiv.innerHTML=`<div class="success-message">✅ 訂單已成功送出!<br><br><strong>訂單編號: ${orderId}</strong><br><br>📌 請私訊官方帳號核對後五碼<br>官方帳號: <strong>@628puagn</strong><br><br>⚠️ 製作天數約 7-10 天<br>📧 確認信已發送至您的 Email</div>`;document.getElementById('orderForm').reset();qtyInput.value=1;selectedStore='';storeSelectGroup.style.display='none';addressGroup.style.display='none';updatePrice();}catch(err){messageDiv.innerHTML='<div class="error-message">❌ 訂單送出失敗<br><br>請透過官方帳號聯繫：<strong>@628puagn</strong></div>';}finally{submitBtn.disabled=false;submitBtn.textContent='確認訂購';}});
+elements.form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const phone = document.getElementById('phone').value.trim();
+  const account = document.getElementById('accountLast5').value.trim();
+  const method = elements.pickup.value;
+  const address = document.getElementById('address').value.trim();
+  
+  if (!/^09\d{8}$/.test(phone)) {
+    elements.message.innerHTML = '<div class="error-message">❌ 請輸入正確手機號碼(例:0912345678)</div>';
+    return;
+  }
+  
+  if (!/^\d{5}$/.test(account)) {
+    elements.message.innerHTML = '<div class="error-message">❌ 帳號後5碼必須是5位數字</div>';
+    return;
+  }
+  
+  let finalAddress = '';
+  if (method === '7-11' || method === '全家') {
+    const storeCity = document.getElementById('storeCity').value.trim();
+    const storeName = document.getElementById('storeName').value.trim();
+    
+    if (!storeCity || !storeName) {
+      elements.message.innerHTML = '<div class="error-message">❌ 請填寫完整的門市資訊</div>';
+      return;
+    }
+    finalAddress = method + '-' + storeCity + '-' + storeName;
+  } else if (method === '郵局包裹') {
+    if (address.length < 5) {
+      elements.message.innerHTML = '<div class="error-message">❌ 請填寫完整地址</div>';
+      return;
+    }
+    finalAddress = address;
+  } else {
+    elements.message.innerHTML = '<div class="error-message">❌ 請選擇取貨方式</div>';
+    return;
+  }
+  
+  elements.submitBtn.disabled = true;
+  elements.submitBtn.textContent = '處理中...';
+  elements.message.innerHTML = '';
+  
+  const quantity = parseInt(elements.qty.value);
+  const subtotal = CFG.PRICE * quantity;
+  const shipping = quantity >= CFG.FREE ? 0 : CFG.SHIP;
+  const total = subtotal + shipping;
+  const orderId = generateOrderId();
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const note = document.getElementById('note').value || '無';
+  
+  const formData1 = {
+    access_key: CFG.KEY,
+    subject: '🛒 新訂單 ' + orderId + ' - 手工辣椒',
+    from_name: '手工辣椒訂購系統',
+    email: CFG.EMAIL,
+    message: '訂單編號:' + orderId + '\n姓名:' + name + '\n電話:' + phone + '\nEmail:' + email + '\n取貨方式:' + method + '\n地址/門市:' + finalAddress + '\n帳號後5碼:' + account + '\n數量:' + quantity + '罐\n小計:NT$ ' + subtotal + '\n運費:NT$ ' + shipping + '\n總計:NT$ ' + total + '\n備註:' + note
+  };
+  
+  const formData2 = {
+    access_key: CFG.KEY,
+    from_name: '手工辣椒訂購系統',
+    email: email,
+    message: '親愛的 ' + name + ' 您好,\n\n感謝您的訂購!\n\n訂單編號:' + orderId + '\n商品:手工辣椒 x ' + quantity + '罐 (300g/罐)\n總計:NT$ ' + total + '\n取貨方式:' + method + '\n地址/門市:' + finalAddress + '\n\n請記得私訊官方 LINE 帳號 @628puagn 告知訂單編號及匯款帳號後五碼。\n\n商品將於確認收到匯款後 7-10 天製作完成並以冷藏方式出貨。\n收到商品後請務必冷藏保存。\n\n謝謝!'
+  };
+  
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData1)
+  })
+  .then(function(response) {
+    return fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData2)
+    });
+  })
+  .then(function(response) {
+    elements.message.innerHTML = '<div class="success-message">✅ 訂單已成功送出!<br><strong>訂單編號:' + orderId + '</strong><br><br>請記得私訊官方 LINE 帳號 @628puagn<br>告知訂單編號及匯款帳號後五碼。<br><br>商品將於確認收到匯款後 7-10 天製作完成。</div>';
+    elements.form.reset();
+    elements.qty.value = 1;
+    elements.storeGroup.style.display = 'none';
+    elements.addressGroup.style.display = 'none';
+    updatePrice();
+  })
+  .catch(function(error) {
+    console.error(error);
+    elements.message.innerHTML = '<div class="error-message">❌ 訂單送出失敗,請稍後再試</div>';
+  })
+  .finally(function() {
+    elements.submitBtn.disabled = false;
+    elements.submitBtn.textContent = '確認訂購';
+  });
+});
 
 updatePrice();
-</script>
-</body>
-</html>字</div>';return;}let finalAddress='';if(pickupMethod==='7-11'||pickupMethod==='全家'){if(!selectedStore){messageDiv.innerHTML='<div class="error-message">❌ 請選擇門市</div>';return;}finalAddress=selectedStore;}else if(pickupMethod==='宅配'){if(addressInput.length<5){messageDiv.innerHTML='<div class="error-message">❌ 請填寫完整地址</div>';return;}finalAddress=addressInput;}else{messageDiv.innerHTML='<div class="error-message">❌ 請選擇取貨方式</div>';return;}submitBtn.disabled=true;submitBtn.textContent='處理中...';messageDiv.innerHTML='';try{const qty=parseInt(qtyInput.value),subtotal=PRICE*qty;let shipping=0;if(pickupMethod==='宅配')shipping=(qty>=FREE_SHIPPING_QTY)?0:SHIPPING_DELIVERY;else if(pickupMethod==='7-11'||pickupMethod==='全家')shipping=(qty>=FREE_SHIPPING_QTY)?0:SHIPPING_STORE;const total=subtotal+shipping,orderId=generateOrderId(),orderTime=new Date().toLocaleString('zh-TW',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}),customerName=document.getElementById('name').value,customerEmail=document.getElementById('email').value,note=document.getElementById('note').value||'無';const merchantEmailContent=`╔═══════════════════════════════════╗
-🛒 新訂單通知 - 手工辣椒
-╚═══════════════════════════════════╝
-訂單編號: ${orderId}
-訂單時間: ${orderTime}
-姓名: ${customerName}
-電話: ${phone}
-Email: ${customerEmail}
-取貨方式: ${pickupMethod}
-收貨地址/門市: ${finalAddress}
-匯款帳號後5碼: ${account}
-商品: 手工辣椒 300g
-單價: NT$ ${PRICE}
-數量: ${qty} 罐
-小計: NT$ ${subtotal}
-運費: ${shipping===0?'免運費 ✓':'NT$ '+shipping}
-總額: NT$ ${total}
-備註: ${note}
-⚠️ 製作天數約 7-10 天
-⚠️ 冷藏出貨`;await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({access_key:WEB3FORMS_ACCESS_KEY,subject:`🛒 新訂單 ${orderId} - 手工辣椒`,from_name:'手工辣椒訂購系統',email:MERCHANT_EMAIL,message:merchantEmailContent})});const customerEmailContent=`親愛的 ${customerName} 您好:
 
-感謝您訂購手工辣椒！
-
-訂單編號: ${orderId}
-商品: 手工辣椒 (300g) x ${qty} 罐
-小計: NT$ ${subtotal}
-運費: ${shipping===0?'免運費 ✓':'NT$ '+shipping}
-總計: NT$ ${total}
-取貨方式: ${pickupMethod}
-地址/門市: ${finalAddress}
-
-⚠️ 重要提醒
-• 製作天數約 7-10 天
-• 冷藏出貨，收到後請冷藏保存
-📌 請私訊官方帳號核對後五碼
-官方帳號: @628puagn`;await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({access_key:WEB3FORMS_ACCESS_KEY,from_name:'手工辣椒訂購系統',email:customerEmail,message:customerEmailContent})});messageDiv.innerHTML=`<div class="success-message">✅ 訂單已成功送出!<br><br><strong>訂單編號: ${orderId}</strong><br><br>📌 請私訊官方帳號核對後五碼<br>官方帳號: <strong>@628puagn</strong><br><br>⚠️ 製作天數約 7-10 天<br>📧 確認信已發送至您的 Email</div>`;document.getElementById('orderForm').reset();qtyInput.value=1;selectedStore='';storeSelectGroup.style.display='none';addressGroup.style.display='none';updatePrice();}catch(err){messageDiv.innerHTML='<div class="error-message">❌ 訂單送出失敗<br><br>請透過官方帳號聯繫：<strong>@628puagn</strong></div>';}finally{submitBtn.disabled=false;submitBtn.textContent='確認訂購';}});
-
-updatePrice();
+})();
 </script>
 </body>
 </html>
